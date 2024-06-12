@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico DW2</title>
+    <link rel="stylesheet" href="/frontend/styles.css">
+    <script src="/backend/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="registerCard">
+            <h2>Registro</h2>
+            <button onclick="showRegisterForm()">Registro</button>
+        </div>
+        <div class="card" id="loginCard">
+            <h2>Iniciar Sesión</h2>
+            <button onclick="showLoginForm()">Iniciar Sesión</button>
+        </div>
+        <div class="card" id="updatePasswordCard">
+            <h2>Actualizar Contraseña</h2>
+            <button onclick="showUpdatePasswordForm()">Actualizar Contraseña</button>
+        </div>
+    </div>
+
+    <div id="formContainer">
+        <form id="registerForm" style="display:none;">
+            <h2>Registro de Usuario</h2>
+            <input type="text" id="registerUsername" placeholder="Nombre de usuario">
+            <input type="password" id="registerPassword" placeholder="Contraseña">
+            <button type="button" onclick="register()">Registrar</button>
+        </form>
+        <form id="loginForm" style="display:none;">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="loginUsername" placeholder="Nombre de usuario">
+            <input type="password" id="loginPassword" placeholder="Contraseña">
+            <button type="button" onclick="login()">Iniciar Sesión</button>
+        </form>
+        <form id="updatePasswordForm" style="display:none;">
+            <h2>Actualizar Contraseña</h2>
+            <input type="text" id="updateUsername" placeholder="Nombre de usuario">
+            <input type="password" id="oldPassword" placeholder="Contraseña antigua">
+            <input type="password" id="newPassword" placeholder="Nueva contraseña">
+            <button type="button" onclick="updatePassword()">Actualizar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
